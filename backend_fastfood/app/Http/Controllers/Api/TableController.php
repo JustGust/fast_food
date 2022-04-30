@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Category;
+use App\Models\Table;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class TableController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $data = Category::select(['id', 'name', 'description', 'img'])->GET();
-        return response()->json([$data, 200]);
+        $data = Table::select(['id', 'name', 'id_statu'])->GET();
+        return response()->json($data, 200);
     }
 
     /**

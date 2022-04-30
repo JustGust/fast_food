@@ -18,16 +18,12 @@ class StatuSeeder extends Seeder
 
             [
                 'id' => '1',
-                'name' => 'active'
+                'name' => 'activo'
             ],
             [
                 'id' => '2',
-                'name' => 'inactive'
-            ],
-            [
-                'id' => '3',
-                'name' => 'out stock'
-            ],
+                'name' => 'inactivo'
+            ]
 
         ]);
     }

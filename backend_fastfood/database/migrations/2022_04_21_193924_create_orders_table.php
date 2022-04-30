@@ -15,14 +15,14 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id')->unique();
-            $table->integer('id_user')->unsigned();
+            $table->integer('id_table')->unsigned();
             $table->integer('id_order_status')->unsigned();
             $table->time('time');
             $table->date('date');
             $table->integer('total_pay');
             $table->timestamps();
 
-            $table->foreign('id_user')->references('id')->on('users')
+            $table->foreign('id_table')->references('id')->on('tables')
             ->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('id_order_status')->references('id')->on('order_status')
             ->onUpdate('cascade')->onDelete('cascade');

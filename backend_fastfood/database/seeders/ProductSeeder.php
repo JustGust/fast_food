@@ -1,0 +1,299 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class ProductSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        DB::table('products')->insert([
+
+            [
+                'id' => '1',
+                'name' => 'Salchi Queso',
+                'id_status' => '1',
+                'id_category' => '1',
+                'img' => '',
+                'description' => 'Sin descripción'
+            ],
+            [
+                'id' => '2',
+                'name' => 'Salchi Costilla',
+                'id_status' => '1',
+                'id_category' => '1',
+                'img' => '',
+                'description' => 'Sin descripción'
+            ],
+            [
+                'id' => '3',
+                'name' => 'Salchi Carne',
+                'id_status' => '1',
+                'id_category' => '1',
+                'img' => '',
+                'description' => 'Sin descripción'
+            ],
+            [
+                'id' => '4',
+                'name' => 'Salchi Todo',
+                'id_status' => '1',
+                'id_category' => '1',
+                'img' => '',
+                'description' => 'Sin descripción'
+            ],
+            [
+                'id' => '5',
+                'name' => 'Salchi Sencilla',
+                'id_status' => '1',
+                'id_category' => '1',
+                'img' => '',
+                'description' => 'Sin descripción'
+            ],
+            [
+                'id' => '6',
+                'name' => 'Hamburguesa Sencilla',
+                'id_status' => '1',
+                'id_category' => '2',
+                'img' => '',
+                'description' => 'Sin descripción'
+            ],
+            [
+                'id' => '7',
+                'name' => 'Hamburguesa Gratinada',
+                'id_status' => '1',
+                'id_category' => '2',
+                'img' => '',
+                'description' => 'Sin descripción'
+            ],
+            [
+                'id' => '8',
+                'name' => 'Hamburguesa Clásica De Ternera',
+                'id_status' => '1',
+                'id_category' => '2',
+                'img' => '',
+                'description' => 'Sin descripción'
+            ],
+            [
+                'id' => '9',
+                'name' => 'Hamburguesa Vegetariana',
+                'id_status' => '1',
+                'id_category' => '2',
+                'img' => '',
+                'description' => 'Sin descripción'
+            ],
+            [
+                'id' => '10',
+                'name' => 'Pizzas Hawaiana',
+                'id_status' => '1',
+                'id_category' => '3',
+                'img' => '',
+                'description' => 'Sin descripción'
+            ],
+            [
+                'id' => '11',
+                'name' => 'Pizzas Champiñones',
+                'id_status' => '1',
+                'id_category' => '3',
+                'img' => '',
+                'description' => 'Sin descripción'
+            ],
+            [
+                'id' => '12',
+                'name' => 'Pizzas Napolitana',
+                'id_status' => '1',
+                'id_category' => '3',
+                'img' => '',
+                'description' => 'Sin descripción'
+            ],
+            [
+                'id' => '13',
+                'name' => 'Hot Dog',
+                'id_status' => '1',
+                'id_category' => '4',
+                'img' => '',
+                'description' => 'Sin descripción'
+            ],
+            [
+                'id' => '14',
+                'name' => 'manzana',
+                'id_status' => '1',
+                'id_category' => '5',
+                'img' => '',
+                'description' => 'Sin descripción'
+            ],
+            [
+                'id' => '15',
+                'name' => 'coca-cola',
+                'id_status' => '1',
+                'id_category' => '5',
+                'img' => '',
+                'description' => 'Sin descripción'
+            ],
+      
+
+        ]);
+
+        DB::table('product_costs')->insert([
+
+            [
+                'id' => '1',
+                'id_product' => '1',
+                'cost' => '8000'
+            ],
+            [
+                'id' => '2',
+                'id_product' => '1',
+                'cost' => '12000'
+            ],
+            [
+                'id' => '4',
+                'id_product' => '2',
+                'cost' => '12000'
+            ],
+            [
+                'id' => '5',
+                'id_product' => '2',
+                'cost' => '22000'
+            ],
+            [
+                'id' => '6',
+                'id_product' => '3',
+                'cost' => '12000'
+            ],
+            [
+                'id' => '7',
+                'id_product' => '3',
+                'cost' => '22000'
+            ],
+            [
+                'id' => '8',
+                'id_product' => '4',
+                'cost' => '15000'
+            ],
+            [
+                'id' => '9',
+                'id_product' => '4',
+                'cost' => '35000'
+            ],
+            [
+                'id' => '10',
+                'id_product' => '5',
+                'cost' => '5000'
+            ],
+            [
+                'id' => '11',
+                'id_product' => '5',
+                'cost' => '1000'
+            ],
+            [
+                'id' => '12',
+                'id_product' => '6',
+                'cost' => '15000'
+            ],
+            [
+                'id' => '13',
+                'id_product' => '7',
+                'cost' => '32000'
+            ],
+            [
+                'id' => '14',
+                'id_product' => '8',
+                'cost' => '30000'
+            ],
+            [
+                'id' => '15',
+                'id_product' => '9',
+                'cost' => '24000'
+            ],
+            [
+                'id' => '16',
+                'id_product' => '10',
+                'cost' => '10000'
+            ],
+            [
+                'id' => '17',
+                'id_product' => '10',
+                'cost' => '25000'
+            ],
+            [
+                'id' => '18',
+                'id_product' => '10',
+                'cost' => '67000'
+            ],
+            [
+                'id' => '19',
+                'id_product' => '11',
+                'cost' => '10000'
+            ],
+            [
+                'id' => '20',
+                'id_product' => '11',
+                'cost' => '25000'
+            ],
+            [
+                'id' => '21',
+                'id_product' => '11',
+                'cost' => '67000'
+            ],
+            [
+                'id' => '22',
+                'id_product' => '12',
+                'cost' => '10000'
+            ],
+            [
+                'id' => '23',
+                'id_product' => '12',
+                'cost' => '25000'
+            ],
+            [
+                'id' => '24',
+                'id_product' => '12',
+                'cost' => '67000'
+            ],
+            [
+                'id' => '25',
+                'id_product' => '13',
+                'cost' => '12000'
+            ],
+            [
+                'id' => '26',
+                'id_product' => '14',
+                'cost' => '1500'
+            ],
+            [
+                'id' => '27',
+                'id_product' => '14',
+                'cost' => '3500'
+            ],
+            [
+                'id' => '28',
+                'id_product' => '14',
+                'cost' => '5500'
+            ],
+            [
+                'id' => '29',
+                'id_product' => '15',
+                'cost' => '1500'
+            ],
+            [
+                'id' => '30',
+                'id_product' => '15',
+                'cost' => '3500'
+            ],
+            [
+                'id' => '31',
+                'id_product' => '15',
+                'cost' => '5500'
+            ],
+
+        ]);
+
+    }
+}

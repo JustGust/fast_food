@@ -1,0 +1,30 @@
+<div class="container">
+
+  <div *ngFor="let table of tables">
+
+    <div class="slide">
+      <div class="item-box-blog">
+        <div class="item-box-blog-image">
+          <div class="item-box-blog-date bg-warning" style="width: 4rem;">
+            <span class="text-card">{{table.name}}</span>
+          </div>
+          <figure> <img alt="" src="../../../assets/img/table.png">
+          </figure>
+        </div>
+        <div class="item-box-blog-body">
+          <div class="text-card">
+            <p> Estado de la mesa: 
+              <span class="badge bg-success" *ngIf="table.id_statu == 1">Disponible</span>
+              <span class="badge bg-danger" *ngIf="table.id_statu == 2">Reservada</span>
+            </p>
+          </div>
+        </div>
+        <div class="mt-4">
+          <button [disabled]="table.id_statu == 2" tabindex="0" class="btn btn-warning text-card">
+            Reservar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
