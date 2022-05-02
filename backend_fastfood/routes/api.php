@@ -35,3 +35,4 @@ Route::get('productCategory/{id}', [ProductController::class, 'showProductCatego
 /* tables route */
 
 Route::get('tables', [TableController::class, 'index']);// return all tables
+Route::get('table/{id}', [TableController::class, 'show']);// return all tables

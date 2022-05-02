@@ -38,7 +38,10 @@ class TableController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Table::select(['id', 'name', 'id_statu'])
+        ->WHERE('id', '=', $id)
+        ->GET();
+        return response()->json($data, 200);
     }
 
     /**

@@ -7,6 +7,7 @@ import { CarrouselComponent } from './components/carrousel/carrousel.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
 
 /* services */
 
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     CarrouselComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

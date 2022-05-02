@@ -1,7 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-
-
 .container{
   display: flex;
   width: 100%;
@@ -78,12 +75,6 @@
   background-color: #eec301;
 }
 
-
-
-.text-card{
-  color: black; 
-  font-family: 'Courgette', cursive;
-}
 
 
 

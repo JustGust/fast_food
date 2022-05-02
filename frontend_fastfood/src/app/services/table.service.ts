@@ -27,8 +27,10 @@ export class TableService {
 
   getTables(){
     return this._httpClient.get<Table[]>(this.env+'tables')
-    .pipe(
-    )
+  }
+
+  getTable( id: any){
+    return this._httpClient.get<Table[]>(this.env+'table/' + id)
   }
 
 }
