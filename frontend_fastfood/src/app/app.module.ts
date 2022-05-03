@@ -8,6 +8,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 /* services */
 
@@ -18,7 +19,8 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     CarrouselComponent,
     WelcomeComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

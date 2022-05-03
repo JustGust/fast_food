@@ -9,7 +9,7 @@ import { Table } from '../interfaces/table';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  tables: Table[] = [];
+  myTable: Table[] = [];
 
   constructor(
     private _TableService: TableService,
@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
       this._TableService
         .getTable(idTable)
         .subscribe((data: Table[]) => {
-          this.tables = data;
+          this.myTable = data;
         });
     } catch (e) {
       console.log(e);

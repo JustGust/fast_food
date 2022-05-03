@@ -1,0 +1,53 @@
+<div class="container">
+    <header
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+       
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+           <img src="../../../assets/img/logo.jpg" alt="" width="60px" height="60px">
+        </a>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li>
+                <a href="#" class="nav-link px-2 link-secondary">
+                    <img src="../../../assets/img/icon/002-work-from-home.png" alt="home" width="40px" height="40px">
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link px-2 link-secondary">
+                    <img src="../../../assets/img/icon/001-hora-de-comer.png" alt="estado del pedido" width="40px" height="40px">
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link px-2 link-secondary">
+                    <img src="../../../assets/img/icon/lista-de-deseos.png" alt="carrito de compra" width="40px" height="40px">
+                </a>
+            </li>
+        </ul>
+
+        <div class="col-md-3 text-end">
+            <div class="dropdown" *ngFor="let myTable of table">
+                <a class="dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="../../../assets/img/icon/001-chair.png" alt="home" width="40px" height="40px">
+
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <div>
+                        <a class="dropdown-item">
+                            <img src="../../../assets/img/icon/001-chair.png" alt="" width="25px" height="25px">
+                            <span class="px-2 text-font">{{myTable.name}}</span>
+                        </a>
+                    </div>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <a class="dropdown-item" (click)="cerraSesion()">
+                            <img src="../../../assets/img/icon/001-hora-de-comer.png" alt="" width="25px" height="25px">
+                            <span class="px-2 text-font" style="color: brown;">Terminar reservación</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+</div>

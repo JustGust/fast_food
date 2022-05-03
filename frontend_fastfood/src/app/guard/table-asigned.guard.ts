@@ -1,25 +1,18 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree, Route } from '@angular/router';
-import { Observable } from 'rxjs';
+import { CanActivate, Router } from '@angular/router';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TableAsignedGuard implements CanActivate {
+  constructor(private _router: Router) {}
 
-  constructor(){}
-
-  canActivate(
-    _route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-   
-   if(localStorage.getItem("idTable")){
-     
-     return false;
-   }else{
-    return true;
-   }
-      
+  canActivate(): boolean {
+    if (localStorage.getItem('idTable')) {
+      this._router.navigate(['home/' + localStorage.getItem('idTable')]);
+      return true;
+    } else {
+      return true;
+    }
   }
-  
 }
