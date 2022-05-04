@@ -4,3 +4,13 @@
   .text-font{
     font-family: 'Courgette', cursive;
   }
+
+  .img-zoom{
+    transition: transform 0.5s;
+  }
+
+  .img-zoom:hover{
+    transform: scale(1.5);
+  }
+
+

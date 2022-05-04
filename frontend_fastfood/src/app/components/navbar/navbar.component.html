@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngFor="let myTable of table">
     <header
         class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
        
@@ -8,32 +8,32 @@
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li>
-                <a href="#" class="nav-link px-2 link-secondary">
-                    <img src="../../../assets/img/icon/002-work-from-home.png" alt="home" width="40px" height="40px">
+                <a [routerLink]="['/home' + myTable.id]" routerLinkActive="router-link-active"  class="nav-link px-2 link-secondary">
+                    <img class="img-zoom" src="../../../assets/img/icon/002-work-from-home.png" alt="home" width="40px" height="40px">
                 </a>
             </li>
             <li>
                 <a href="#" class="nav-link px-2 link-secondary">
-                    <img src="../../../assets/img/icon/001-hora-de-comer.png" alt="estado del pedido" width="40px" height="40px">
+                    <img class="img-zoom" src="../../../assets/img/icon/001-hora-de-comer.png" alt="estado del pedido" width="40px" height="40px">
                 </a>
             </li>
             <li>
                 <a href="#" class="nav-link px-2 link-secondary">
-                    <img src="../../../assets/img/icon/lista-de-deseos.png" alt="carrito de compra" width="40px" height="40px">
+                    <img class="img-zoom" src="../../../assets/img/icon/lista-de-deseos.png" alt="carrito de compra" width="40px" height="40px">
                 </a>
             </li>
         </ul>
 
         <div class="col-md-3 text-end">
-            <div class="dropdown" *ngFor="let myTable of table">
+            <div class="dropdown">
                 <a class="dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="../../../assets/img/icon/001-chair.png" alt="home" width="40px" height="40px">
+                    <img src="../../../assets/img/icon/001-chair.png" alt="table" width="40px" height="40px">
 
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <div>
                         <a class="dropdown-item">
-                            <img src="../../../assets/img/icon/001-chair.png" alt="" width="25px" height="25px">
+                            <img src="../../../assets/img/icon/001-chair.png" alt="table" width="25px" height="25px">
                             <span class="px-2 text-font">{{myTable.name}}</span>
                         </a>
                     </div>
@@ -42,7 +42,7 @@
                     </li>
                     <li>
                         <a class="dropdown-item" (click)="singOff()">
-                            <img src="../../../assets/img/icon/salida.png" alt="" width="25px" height="25px">
+                            <img src="../../../assets/img/icon/salida.png" alt="sing off" width="25px" height="25px">
                             <span class="px-2 text-font" style="color: brown;">Terminar reservación</span>
                         </a>
                     </li>
