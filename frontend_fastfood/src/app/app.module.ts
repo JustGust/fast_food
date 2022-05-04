@@ -10,7 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearcherComponent } from './components/searcher/searcher.component';
-import { CarouselCategoriesComponent } from './components/carousel-categories/carousel-categories.component';
 
 /* services */
 
@@ -23,8 +22,7 @@ import { CarouselCategoriesComponent } from './components/carousel-categories/ca
     WelcomeComponent,
     HomeComponent,
     NavbarComponent,
-    SearcherComponent,
-    CarouselCategoriesComponent
+    SearcherComponent
   ],
   imports: [
     BrowserModule,
