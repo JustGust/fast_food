@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-carrousel',
   templateUrl: './carrousel.component.html',

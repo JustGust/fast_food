@@ -36,3 +36,4 @@ Route::get('productCategory/{id}', [ProductController::class, 'showProductCatego
 
 Route::get('tables', [TableController::class, 'index']);// return all tables
 Route::get('table/{id}', [TableController::class, 'show']);// return all tables
+Route::put('table/update/{id}', [TableController::class, 'update']);// updated the table's statu

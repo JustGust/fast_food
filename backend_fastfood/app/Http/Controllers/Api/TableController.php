@@ -53,7 +53,13 @@ class TableController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $id_statu = $request['id_statu'];
+        
+        Table::find($id)->update(['id_statu' => $id_statu]);
+        return response()-> json([
+            'message' => 'successfully updated',
+            'success' => true
+        ], 200);
     }
 
     /**

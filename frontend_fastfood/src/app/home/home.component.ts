@@ -29,6 +29,6 @@ export class HomeComponent implements OnInit {
     }
     
     localStorage.setItem("idTable", idTable);
-
+    this._TableService.updateStatu(localStorage.getItem('idTable'), 2);
   }
 }
