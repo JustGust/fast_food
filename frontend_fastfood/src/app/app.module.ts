@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CarrouselComponent } from './components/carrousel/carrousel.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearcherComponent } from './components/searcher/searcher.component';
 import { CarrouselCategoriesComponent } from './components/carrousel-categories/carrousel-categories.component';
+
 
 /* services */
 
@@ -29,7 +33,9 @@ import { CarrouselCategoriesComponent } from './components/carrousel-categories/
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   providers: [
   ],

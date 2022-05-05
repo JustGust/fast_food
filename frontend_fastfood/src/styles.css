@@ -13,4 +13,13 @@
     transform: scale(1.5);
   }
 
+  .img-category:hover{
+    background-color:#000;
+    opacity: .5;
+  }
+  .img-category{
+    height: 150px;
+    border-radius: 5%;
+  }
+
 

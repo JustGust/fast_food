@@ -1,1 +1,14 @@
-<p>carrousel-categories works!</p>
+
+  <h5 class="text-font">Categorias</h5>
+
+<owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide *ngFor="let category of categories">
+      <a href="">
+      <div class="slide px-2">
+        <img class="img-category" src="{{category.img}}" alt="img 1">
+      </div>
+    </a>
+      <span class="text-font mx-4">{{category.name}}</span>
+    </ng-template>
+  </owl-carousel-o>
+

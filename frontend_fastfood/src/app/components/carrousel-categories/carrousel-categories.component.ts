@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Category } from 'src/app/interfaces/category';
 
 @Component({
   selector: 'app-carrousel-categories',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarrouselCategoriesComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
+
+  @Input() categories: any[] = [];
+ 
 
   ngOnInit(): void {
+  }
+
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 600,
+    navText: ['&#8249', '&#8250;'],
+    responsive: {
+     
+      1000: {
+        items: 4
+      }
+    },
+    nav: true
   }
 
 }

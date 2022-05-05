@@ -1,5 +1,7 @@
-
-    <app-navbar [table] = "myTable"></app-navbar>
+<app-navbar [table]="myTable"></app-navbar>
+<div>
     <app-searcher></app-searcher>
-<app-carrousel-categories></app-carrousel-categories>
-
+</div>
+<div class="py-4">
+    <app-carrousel-categories [categories]="myCategories" ></app-carrousel-categories>
+</div>

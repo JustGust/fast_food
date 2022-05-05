@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
   @Input() table: any[] = [];
 
   ngOnInit(): void {
-    
+
   }
 
   singOff(){
