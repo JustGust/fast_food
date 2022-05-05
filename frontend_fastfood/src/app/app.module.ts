@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearcherComponent } from './components/searcher/searcher.component';
 import { CarrouselCategoriesComponent } from './components/carrousel-categories/carrousel-categories.component';
+import { CardProductComponent } from './components/card-product/card-product.component';
 
 
 /* services */
@@ -28,7 +29,8 @@ import { CarrouselCategoriesComponent } from './components/carrousel-categories/
     HomeComponent,
     NavbarComponent,
     SearcherComponent,
-    CarrouselCategoriesComponent
+    CarrouselCategoriesComponent,
+    CardProductComponent
   ],
   imports: [
     BrowserModule,
