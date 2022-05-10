@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { TableService } from '../services/table.service';
 import { CategoryService } from '../services/category.service';
+import { ProductService } from '../services/product.service';
 import { ActivatedRoute } from '@angular/router';
 import { Table } from '../interfaces/table';
 import { Category } from '../interfaces/category';
+import { Product } from '../interfaces/product';
 
 @Component({
   selector: 'app-home',
@@ -13,16 +15,19 @@ import { Category } from '../interfaces/category';
 export class HomeComponent implements OnInit {
   myTable: Table[] = [];
   myCategories: Category[] = [];
+  myProducts: Product[] = [];
 
   constructor(
     private _TableService: TableService,
     private _CategoryService: CategoryService,
+    private _ProductService: ProductService,
     private _ActivatedRoute: ActivatedRoute
   ) {}
 
   async ngOnInit() {
     this.methodsTables();
     this.methodsCategories();
+    this.methodsProducts();
   }
 
   methodsTables() {
@@ -43,7 +48,16 @@ export class HomeComponent implements OnInit {
     try {
       this._CategoryService.getCategories().subscribe((data: Category[]) => {
         this.myCategories = data;
-        console.log(data);
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  methodsProducts() {
+    try {
+      this._ProductService.getProducts().subscribe((data: Product[]) => {
+        this.myProducts = data;
       });
     } catch (e) {
       console.log(e);

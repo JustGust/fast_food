@@ -11,7 +11,7 @@ export class CarrouselCategoriesComponent implements OnInit {
 
   constructor() {}
 
-  @Input() categories: any[] = [];
+  @Input() categories: Category[] = [];
  
 
   ngOnInit(): void {

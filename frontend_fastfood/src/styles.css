@@ -15,7 +15,7 @@
 
   .img-category:hover{
     background-color:#000;
-    opacity: .5;
+    filter: brightness(50%);
   }
   .img-category{
     height: 150px;

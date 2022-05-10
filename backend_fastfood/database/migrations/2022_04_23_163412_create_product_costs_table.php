@@ -16,10 +16,13 @@ class CreateProductCostsTable extends Migration
         Schema::create('product_costs', function (Blueprint $table) {
             $table->increments('id')->unique();
             $table->integer('id_product')->unsigned();
+            $table->integer('id_size')->unsigned()->nullable();
             $table->integer('cost');
             $table->timestamps();
 
             $table->foreign('id_product')->references('id')->on('products')
+            ->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('id_size')->references('id')->on('sizes')
             ->onUpdate('cascade')->onDelete('cascade');
         });
     }

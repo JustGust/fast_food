@@ -15,6 +15,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearcherComponent } from './components/searcher/searcher.component';
 import { CarrouselCategoriesComponent } from './components/carrousel-categories/carrousel-categories.component';
 import { CardProductComponent } from './components/card-product/card-product.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 
 /* services */
@@ -30,7 +31,8 @@ import { CardProductComponent } from './components/card-product/card-product.com
     NavbarComponent,
     SearcherComponent,
     CarrouselCategoriesComponent,
-    CardProductComponent
+    CardProductComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

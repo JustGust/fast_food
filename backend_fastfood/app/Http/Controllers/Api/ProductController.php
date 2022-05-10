@@ -20,7 +20,7 @@ class ProductController extends Controller
             ->JOIN('categories', 'products.id_category', '=', 'categories.id')
             ->GET();
 
-        return response()->json([$data, 200]);
+        return response()->json($data, 200);
     }
 
     /**
@@ -42,14 +42,13 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $data = Product::select(['products.id', 'products.name', 'products.img as product_img', 'status.name as status_name', 'categories.name as category_name', 'product_costs.cost'])
+        $data = Product::select(['products.id', 'products.name', 'products.img as img', 'status.name as status_name', 'categories.name as category_name'])
             ->JOIN('status', 'products.id_status', '=', 'status.id')
             ->JOIN('categories', 'products.id_category', '=', 'categories.id')
-            ->JOIN('product_costs', 'products.id', '=', 'product_costs.id')
             ->WHERE('products.id', '=', $id)
             ->GET();
 
-        return response()->json([$data, 200]);
+        return response()->json($data, 200);
     }
 
       /**
@@ -66,7 +65,7 @@ class ProductController extends Controller
             ->WHERE('categories.id', '=', $id)
             ->GET();
 
-        return response()->json([$data, 200]);
+        return response()->json($data, 200);
     }
 
     /**

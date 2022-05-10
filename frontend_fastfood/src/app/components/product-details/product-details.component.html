@@ -1,0 +1,53 @@
+<section class="product" *ngFor="let prod of product">
+  <div class="product__photo">
+    <div class="photo-container">
+      <div class="photo-main">
+        <div class="controls">
+          <a [routerLink]="['/home', idTable]" routerLinkActive="router-link-active" class="material-icons">Atras</a>
+        </div>
+        <img src="{{prod.img}}" width="300px" height="180px" alt="green apple slice">
+      </div>
+      <div class="photo-album">
+        <ul>
+          <li><img src="{{prod.img}}" alt="producto"></li>
+          <li><img src="{{prod.img}}" alt="producto"></li>
+          <li><img src="{{prod.img}}" alt="producto"></li>
+          <li><img src="{{prod.img}}" alt="producto"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="product__info">
+    <div class="title">
+      <h1>{{prod.name}}</h1>
+      <span>Categoria: {{prod.category_name}}</span>
+    </div>
+
+    <div class="variant">
+
+        <div class="variant py-4">
+          <div class="container">
+            <form>
+              <label *ngFor="let cost of productCosts">
+                <input type="radio" name="radio" checked />
+                <span class="cost-info text-font">{{cost.size_name}} - {{cost.cost | currency:'USD':true:'1.2-2'}}</span>
+              </label>
+            </form>
+          </div>
+  
+      </div>
+
+    </div>
+    <div class="description">
+      <h3>CANTIDAD</h3>
+      <ul>
+        <li>Apples are nutricious</li>
+        <li>Apples may be good for weight loss</li>
+        <li>Apples may be good for bone health</li>
+        <li>They're linked to a lowest risk of diabetes</li>
+      </ul>
+    </div>
+    <button class="buy--btn">AGREGAR AL CARRO</button>
+  </div>
+</section>
+

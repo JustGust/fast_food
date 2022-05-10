@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\ProductController;
+use App\Http\Controllers\Api\ProductCostController;
 use App\Http\Controllers\Api\TableController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -35,5 +36,10 @@ Route::get('productCategory/{id}', [ProductController::class, 'showProductCatego
 /* tables route */
 
 Route::get('tables', [TableController::class, 'index']);// return all tables
-Route::get('table/{id}', [TableController::class, 'show']);// return all tables
+Route::get('table/{id}', [TableController::class, 'show']);//return one table according to id
 Route::put('table/update/{id}', [TableController::class, 'update']);// updated the table's statu
+
+
+/* product_costs route */
+
+Route::get('product/cost/{id}', [ProductCostController::class, 'show']); //return all cost according to product'S id
